@@ -1,0 +1,114 @@
+html {
+  height: 100%;
+  /* --primary: #003366;
+  --highlight: #0078d7;
+  --background-color: #f0f8ff;
+  --light-border: #eaeaea; */
+  
+  --primary: #2B60C9;
+  --highlight: var(--primary);
+  --background-color: #f0f8ff;
+  --light-border: #eaeaea;
+  --shadow-1: rgba(227, 9, 9, 0.05);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Use viewport height to ensure the footer can stick to the bottom */
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* Container for the main content */
+.main-content {
+  flex: 1; /* Allows the main content to grow and push the footer down */
+}
+/* Header styles */
+.appHeader {
+  display: flex;
+  justify-content: flex-end; /* Align nav items to the right */
+  /* background-color: #003366; */
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 20px; /* Reduced padding */
+}
+
+.navItem {
+  margin-left: 20px; /* Space between nav items */
+  color: white;
+  text-decoration: none;
+  font-size: 0.875rem; /* Smaller font size for nav items */
+}
+
+/* Flight list container */
+.flightListContainer {
+  margin: 20px auto;
+  max-width: 600px; /* Smaller width for the flight container */
+  background-color: var(--background-color);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 15px;
+  /* border-top: 3px solid var(--primary); */
+}
+
+.flightListTitle {
+  color: var(--primary);
+  font-size: 1.25rem; /* Smaller title size */
+  text-align: center;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--light-border); /* Lighter border */
+}
+
+.flightList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.flightListItem {
+  background-color: #ffffff;
+  margin-bottom: 5px; /* Smaller margin */
+  padding: 10px; /* Less padding */
+  border-radius: 4px; /* Smaller border-radius */
+  box-shadow: 0 1px 4px var(--shadow-1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 3px solid var(--highlight); /* Thinner left border */
+  font-size: 0.875rem; /* Smaller font size */
+}
+
+.flightListItem span {
+  font-weight: bold;
+}
+
+/* Footer styles */
+.appFooter {
+  /* background-color: #002244; Slightly darker footer background for contrast */
+  background-color: var(--primary); /* Slightly darker footer background for contrast */
+  color: white;
+  padding: 10px 20px; /* Adjusted padding */
+  display: flex;
+  justify-content: space-between; /* Align copyright and social media icons */
+  align-items: center;
+  flex-direction: row; /* Change direction to row */
+}
+
+
+.socialMediaIcon img {
+  filter: brightness(0) invert(1); /* Ensure icons are visible against dark background */
+  width: 20px; /* Slightly smaller icons */
+  height: 20px;
+  margin-left: 10px; /* Space between icons */
+}
+
+/* Additional styles */
+.socialMedia {
+  display: flex; /* Ensure social media icons are inline */
+}
